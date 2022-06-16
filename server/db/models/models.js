@@ -58,7 +58,7 @@ BasketDevice.belongsTo(Device);
 Brand.hasMany(Device);
 Brand.belongsToMany(Type, { through: TypeBrand });
 
-Device.hasMany(DeviceInfo);
+Device.hasMany(DeviceInfo, { as: 'info' });
 Device.belongsTo(Type);
 Device.belongsTo(Brand);
 Device.hasMany(Rating);
